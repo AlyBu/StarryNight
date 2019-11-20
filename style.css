@@ -6,6 +6,7 @@ html {
     padding: 0;
 }
 
+/*the moon*/
 .moon {
     box-shadow: inset -10px 2px 0 0 #899098;
     width: 100px;
@@ -18,45 +19,31 @@ html {
     float: right;
 }
 
-.circle1 {
+.moon > .circle {
     background: #b9b8b0;
+    box-shadow: inset 4px -2px 0 0px #535457;
+}
+.circle.a {
     top: 30%;
     left: -20%;
     width: 27%;
     height: 27%;
-    box-shadow: inset 4px -2px 0 0px #535457;
 }
 
-.circle2 {
-    background: #b9b8b0;
+.circle.b {
     top: 70%;
     left: -20%;
     width: 20%;
     height: 20%;
-    box-shadow: inset 4px -2px 0 0 #535457;
 }
 
-.circle3 {
+.circle.c {
     background: #b9b8b0;
     top: 30%;
     left: -20%;
     width: 10%;
     height: 10%;
-    box-shadow: inset 4px -2px 0 0 #535457;
 }
-
-/*.moon div:nth-child(2) {*/
-/*    top: -11%;*/
-/*    left: 60%;*/
-/*    width: 16%;*/
-/*    height: 16%;*/
-/*}*/
-/*.moon div:nth-child(3) {*/
-/*    top: 25%;*/
-/*    left: 44%;*/
-/*    width: 16%;*/
-/*    height: 16%;*/
-/*}*/
 
 /* mountains */
 /*the bigger mountain*/
@@ -119,4 +106,106 @@ html {
     right: 0;
     top: 0;
     transform: translate(50%);
+}
+
+/*the hills*/
+.ground {
+    z-index: 1;
+    background-color: green;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.ground > div {
+    border-bottom: none;
+    border-radius: .5em .5em 0 0;
+    transform: perspective(.5em) rotateX(5deg);
+    transform-origin: bottom;
+}
+
+.hill.a {
+    background-color: inherit;
+    width: 400px;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+    right: 30px;
+    transform: perspective(.4em) rotateX(8deg);
+}
+
+.hill.b {
+    background-color: inherit;
+    width: 400px;
+    height: 90px;
+    position: absolute;
+    top: -90px;
+    right: 200px;
+}
+
+.hill.c {
+    background-color: inherit;
+    width: 300px;
+    height: 220px;
+    position: absolute;
+    top: -220px;
+    right: 400px;
+}
+
+.hill.d {
+    background-color: inherit;
+    width: 400px;
+    height: 230px;
+    position: absolute;
+    top: -250px;
+    right: 150px;
+    transform: perspective(.5em) rotateX(7deg);
+}
+
+.hill.e {
+    background-color: inherit;
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    top: -60px;
+    right: 600px;
+}
+
+.hill.f {
+    background-color: inherit;
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    right: 700px;
+}
+
+.hill.g {
+     background-color: inherit;
+     width: 400px;
+     height: 100px;
+     position: absolute;
+     top: -100px;
+     right: 70%;
+    transform: perspective(.6em) rotateX(8deg);
+}
+
+.hill.h {
+    background-color: inherit;
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+.hill.i {
+    background-color: inherit;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    top: -90px;
+    left: 70px;
 }

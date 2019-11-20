@@ -209,3 +209,95 @@ html {
     top: -90px;
     left: 70px;
 }
+
+.tree {
+    /*background-image: linear-gradient(-90deg, red, yellow);*/
+    z-index: 4;
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    border-width: 1.5em .5em;
+    border-style: solid;
+    border-radius: 30%;
+    border-color: transparent transparent darkgreen transparent;
+}
+
+.tree::after {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -24px;
+    border-radius: 30%;
+    border-width: 2.5em 1.5em;
+    border-style: solid;
+    border-color: transparent transparent darkgreen transparent;
+}
+
+.tree::before {
+    content: '';
+    border-radius: 30%;
+    position: absolute;
+    top: -15px;
+    left: -40px;
+    border-width: 3.5em 2.5em;
+    border-style: solid;
+    border-color: transparent transparent darkgreen transparent;
+}
+
+.tree-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tree-dark {
+    border-color: transparent transparent #004702 transparent;
+}
+
+.tree-dark::after {
+    border-color: transparent transparent #004702 transparent;
+}
+
+.tree-dark::before {
+    border-color: transparent transparent #004702 transparent;
+}
+
+li:nth-child(1) {
+    top: 82%;
+    left: 45%;
+}
+
+li:nth-child(2) {
+    /*font-size: 1.25em;*/
+    top: 82%;
+    left: 83%;
+}
+
+li:nth-child(3) {
+    /*font-size: 1.25em;*/
+    top: 78%;
+    left: 73%;
+}
+
+li:nth-child(4) {
+    /*font-size: 1.25em;*/
+    top: 82%;
+    left: 92%;
+}
+
+li:nth-child(5) {
+    /*font-size: 2em;*/
+    top: 77%;
+    left: 10%;
+}
+
+li:nth-child(6) {
+    /*font-size: 0.75em;*/
+    top: 80%;
+    left: 55%;
+}
+
+li:nth-child(7) {
+    top: 78%;
+    left: 61%;
+}

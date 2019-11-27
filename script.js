@@ -40,7 +40,7 @@ window.onload = function () {
         stars[theChosenOne].style.opacity = random(0.5, 1).toString();
         // let t = setTimeout(changeOpacity, 5000);
     }
-    
+
     var changeOpacityInterval = setInterval(changeOpacity, speedStar);
 
 

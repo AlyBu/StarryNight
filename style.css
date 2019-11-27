@@ -48,16 +48,110 @@ html {
 /*original star*/
 #star {
     z-index: -1;
-    opacity: 0;
     position: absolute;
     box-shadow: 0 0 5px rgba(255, 255, 255, 1);
     overflow: hidden;
-    top: 20%;
-    left: 20%;
+    top: -10%;
+    left: -10%;
     width: 4px;
     height: 4px;
     border-radius: 50%;
     background: white;
+}
+
+/*comets*/
+.comets {
+    transform: rotateZ(45deg);
+}
+
+.comet {
+    z-index: -1;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    height: 2px;
+    background: linear-gradient(-45deg, #8dbfff, rgba(0, 0, 255, 0));
+    filter: drop-shadow(0 0 6px #699bff);
+    animation: tail 3000ms ease-in-out infinite, moving 3000ms ease-in-out infinite;
+}
+
+.comet::before, .comet::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #99c0ff, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shine 3000ms ease-in-out infinite;
+}
+
+.comet::after {
+    transform: translateX(50%) rotateZ(-45deg);
+}
+
+.comet:nth-child(1) {
+    top: calc(50% - 200px);
+    left: calc(100% - 300px);
+    animation-delay: 650ms;
+}
+
+.comet:nth-child(1)::before, .comet:nth-child(1)::after {
+    animation-delay: 650ms;
+}
+
+.comet:nth-child(2) {
+    top: calc(50% - 50px);
+    left: calc(50% - 190px);
+    animation-delay: 150ms;
+}
+
+.comet:nth-child(2)::before, .comet:nth-child(2)::after {
+    animation-delay: 150ms;
+}
+
+.comet:nth-child(3) {
+    top: calc(50% - 20px);
+    left: calc(90% - 200px);
+    animation-delay: 1500ms;
+}
+
+.comet:nth-child(3)::before, .comet:nth-child(3)::after {
+    animation-delay: 1500ms;
+}
+
+/*animations comets*/
+@keyframes tail {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes shine {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 30px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes moving {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(320px);
+    }
 }
 
 /* mountains */

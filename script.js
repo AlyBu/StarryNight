@@ -43,5 +43,4 @@ window.onload = function () {
 
     var changeOpacityInterval = setInterval(changeOpacity, speedStar);
 
-
 }

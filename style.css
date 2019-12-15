@@ -21,7 +21,7 @@ html {
 
 .moon > .circle {
     background: #b9b8b0;
-    box-shadow: inset 4px -2px 0 0px #535457;
+    box-shadow: inset 4px -2px 0 0 #535457;
 }
 .circle.a {
     top: 30%;
@@ -43,6 +43,66 @@ html {
     left: -20%;
     width: 10%;
     height: 10%;
+}
+
+/*The clouds*/
+.cloud-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cloud-first {
+    width: 5em;
+}
+
+.cloud-first::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 44%;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    background-color: inherit;
+}
+
+.cloud-first::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -30%;
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    background-color: inherit;
+}
+
+.cloud-second {
+    font-size: 2em;
+    width: 5em;
+}
+
+.cloud-second::before {
+    content: '';
+    position: absolute;
+    bottom: 30%;
+    right: 15%;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    background-color: inherit;
+}
+
+.cloud-second::after {
+    content: '';
+    position: absolute;
+    bottom: 35%;
+    right: 35%;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 50%;
+    background-color: inherit;
 }
 
 /*original star*/
